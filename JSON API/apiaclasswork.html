@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    fetch("https://jsonplaceholder.typicode.com/users")
+    .then(a => a.json()  )
+    .then(json =>
+    {
+        for( var d in json )
+
+        {
+            document.write(json[d].id +"<br>"+ json[d].name+"<br>"+ json[d].username +"<br>"+ json[d].email +"<br>"+ json[d].address.street   );
+            document.write("<br> <br>")
+        }
+  
+    })
+</script>
